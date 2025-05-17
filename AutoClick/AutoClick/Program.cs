@@ -14,6 +14,7 @@ const uint MOUSEEVENTF_LEFTDOWN = 0x0002;
 const uint MOUSEEVENTF_LEFTUP = 0x0004;
 
 Console.OutputEncoding = Encoding.UTF8;
+Thread.Sleep(10000);
 while (true)
 {
     // Lấy vị trí hiện tại của con trỏ chuột
@@ -26,7 +27,7 @@ while (true)
     Thread.Sleep(100); // Đợi một chút
 
     // Di chuyển chuột lên trên 300 px
-    SetCursorPos(oldPos.X, oldPos.Y - 250);
+    SetCursorPos(oldPos.X, oldPos.Y - 280);
 
     // Nhấn chuột trái
     mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, UIntPtr.Zero);
@@ -35,7 +36,7 @@ while (true)
     Thread.Sleep(100); // Đợi một chút
 
     // Di chuyển sang bên phải 50 px
-    SetCursorPos(oldPos.X + 80, oldPos.Y - 30);
+    SetCursorPos(oldPos.X + 100, oldPos.Y + 40);
 
     // Nhấn chuột trái
     mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, UIntPtr.Zero);
