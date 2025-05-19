@@ -23,27 +23,23 @@ while (true)
     ClickLeftMouse();
     Thread.Sleep(100);
 
-    var random = new Random();
-    var randomNumber = random.Next(1, 4);
-    var x = oldPos.X;
-    var y = oldPos.Y;
-    switch (randomNumber)
-    {
-        case 1: // Chọn ô kỹ năng thứ 1
-            x = oldPos.X - 120;
-            y = oldPos.Y - 280;
+    // Chọn kỹ năng 1
+    SetCursorPos(oldPos.X - 150, oldPos.Y - 280);
+    ClickLeftMouse();
+    Thread.Sleep(100);
 
-            break;
-        case 2: // Chọn ô kỹ năng thứ 2
-            x = oldPos.X;
-            y = oldPos.Y - 280;
-            break;
-        case 3: // Chọn ô kỹ năng thứ 3
-            x = oldPos.X + 120;
-            y = oldPos.Y - 280;
-            break;
-    }
-    SetCursorPos(x, y);
+    // Chọn kỹ năng 2
+    SetCursorPos(oldPos.X, oldPos.Y - 280);
+    ClickLeftMouse();
+    Thread.Sleep(100);
+
+    // Chọn kỹ năng 3
+    SetCursorPos(oldPos.X + 150, oldPos.Y - 280);
+    ClickLeftMouse();
+    Thread.Sleep(100);
+
+    // Nhấn nút xác nhận
+    SetCursorPos(oldPos.X, oldPos.Y - 100);
     ClickLeftMouse();
     Thread.Sleep(100);
 
@@ -56,7 +52,7 @@ while (true)
     SetCursorPos(oldPos.X, oldPos.Y);
 
     Thread.Sleep(4000);
-    Console.WriteLine("Chay lần thứ {0} chọn kỹ năng {1} thông tin con trỏ chuột: x-{2}, y-{3}", i++, randomNumber, x, y);
+    Console.WriteLine("Chay lần thứ {0}.", i++);
 }
 
 static void ClickLeftMouse()
