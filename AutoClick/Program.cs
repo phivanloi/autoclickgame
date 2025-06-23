@@ -21,32 +21,57 @@ while (true)
     // Nhấn chuột tại ví trí hiện tại, Nút bắt đầu game, người dùng sẽ đặt sẵn vào nút bắt đầu game
     GetCursorPos(out POINT oldPos);
     ClickLeftMouse();
+    Thread.Sleep(1000);
+
+    // Chọn kỹ năng 3
+    SetCursorPos(oldPos.X + 150, oldPos.Y - 300);
+    ClickLeftMouse();
+    Thread.Sleep(1000);
+
+    // Chọn kỹ năng 2
+    SetCursorPos(oldPos.X, oldPos.Y - 300);
+    ClickLeftMouse();
     Thread.Sleep(100);
 
     // Chọn kỹ năng 1
-    SetCursorPos(oldPos.X - 150, oldPos.Y - 280);
+    SetCursorPos(oldPos.X - 150, oldPos.Y - 300);
     ClickLeftMouse();
-    Thread.Sleep(100);
-
-    // Chọn kỹ năng 2
-    SetCursorPos(oldPos.X, oldPos.Y - 280);
-    ClickLeftMouse();
-    Thread.Sleep(100);
-
-    // Chọn kỹ năng 3
-    SetCursorPos(oldPos.X + 150, oldPos.Y - 280);
-    ClickLeftMouse();
-    Thread.Sleep(100);
+    Thread.Sleep(1000);
 
     // Nhấn nút xác nhận
-    SetCursorPos(oldPos.X, oldPos.Y - 100);
+    SetCursorPos(oldPos.X, oldPos.Y - 120);
     ClickLeftMouse();
-    Thread.Sleep(100);
+    Thread.Sleep(1000);
+
+    // Nhấn nút chọn quái 1
+    SetCursorPos(oldPos.X + 80, oldPos.Y - 110);
+    ClickLeftMouse();
+    Thread.Sleep(1000);
+
+    // Nhấn nút chọn quái 2
+    SetCursorPos(oldPos.X, oldPos.Y - 110);
+    ClickLeftMouse();
+    Thread.Sleep(1000);
+
+    // Nhấn nút chọn quái 3
+    SetCursorPos(oldPos.X - 80, oldPos.Y - 110);
+    ClickLeftMouse();
+    Thread.Sleep(1000);
+
+    // Nhấn nút chọn quái 4
+    SetCursorPos(oldPos.X - 155, oldPos.Y - 110);
+    ClickLeftMouse();
+    Thread.Sleep(1000);
 
     // Nhấn nút thoát game
-    SetCursorPos(oldPos.X + 100, oldPos.Y + 40);
+    SetCursorPos(oldPos.X + 150, oldPos.Y + 40);
     ClickLeftMouse();
-    Thread.Sleep(100);
+    Thread.Sleep(1000);
+
+    // Nhất nút bắt đầu game mới hoặc tìm trận
+    SetCursorPos(oldPos.X, oldPos.Y + 100);
+    ClickLeftMouse();
+    Thread.Sleep(1000);
 
     // Di chuyển chuột về vị trí cũ
     SetCursorPos(oldPos.X, oldPos.Y);
